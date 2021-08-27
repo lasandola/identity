@@ -17,6 +17,7 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
     print('got path: '+self.path)
     self.send_response(200)
     self.send_header('Content-Type', 'application/json')
+    self.send_header('Access-Control-Allow-Origin', '*')
     self.end_headers()
     age_not_legal = False
 
